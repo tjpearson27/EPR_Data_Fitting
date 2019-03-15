@@ -19,3 +19,9 @@ class data_fit_gui:
 
     def import_data(self):
         
+
+
+
+root = Tk()
+gui = data_fit_gui(root)
+root.mainloop()
