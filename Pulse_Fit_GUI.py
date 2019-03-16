@@ -3,8 +3,7 @@
 
 from Tkinter import *
 import tkFileDialog
-import pulse_fit_main_scripts as pulseFit 
-
+#import pulse_fit_main_scripts as pulseFit 
 
 class data_fit_gui:
     def __init__(self, master):
@@ -21,10 +20,13 @@ class data_fit_gui:
         self.close_button.pack()
 
     def import_data(self):
-        pulseFit.select_file()
+        def f():
+		newfilename = tkFileDialog.askopenfilename(initialfile=s.get(), multiple=False)
+	
+		if (str(newfilename)) != "" and ( len(newfilename)>0):
+	        	s.set(newfilename)
+	return f
         
-
-
 
 root = Tk()
 gui = data_fit_gui(root)
