@@ -1,7 +1,10 @@
 # GUI application to run pulse EPR Fitting scripts
 # This initializes the GUI and should allow one to interface with the program
 
-from Tkinter import Tk, Label, Button
+from Tkinter import *
+import tkFileDialog
+import pulse_fit_main_scripts as pulseFit 
+
 
 class data_fit_gui:
     def __init__(self, master):
@@ -18,6 +21,7 @@ class data_fit_gui:
         self.close_button.pack()
 
     def import_data(self):
+        pulseFit.select_file()
         
 
 
